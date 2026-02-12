@@ -1,10 +1,12 @@
-<center>
+<h1 align="center">
+SmartThinker: Progressive Chain-of-Thought Length Calibration for Efficient Large Language Model Reasoning
+</h1>
 
-# SmartThinker: Progressive Chain-of-Thought Length Calibration for Efficient Large Language Model Reasoning
+<div align="center">
 
 [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-green)](https://huggingface.co/collections/etherwindy/smartthinker)
 
-</center>
+</div>
 
 ## Abastrct
 
@@ -35,6 +37,20 @@ Install dependencies:
 conda create -n SmartThinker python==3.12
 conda activate SmartThinker
 pip install -r requirement.txt
+```
+
+## Data Preprocess
+
+Training dataset:
+
+``` bash
+python data_preprocess/deepscaler.py
+```
+
+Test dataset:
+
+``` bash
+python data_preprocess/aime25.py
 ```
 
 ## Training
