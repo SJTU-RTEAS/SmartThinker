@@ -4,7 +4,7 @@ SmartThinker: Progressive Chain-of-Thought Length Calibration for Efficient Larg
 
 <div align="center">
 
-[![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-green)](https://huggingface.co/collections/etherwindy/smartthinker)
+[![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-green)](https://huggingface.co/collections/etherwindy/smartthinker) [![arXiv](https://img.shields.io/badge/arXiv-2603.08000-b31b1b.svg)](https://arxiv.org/abs/2603.08000)
 
 </div>
 
@@ -85,4 +85,18 @@ The test scripts are located in the `src/test` folder. Take AIME25 as an example
 
 ``` bash
 python src/test/aime25_vllm.py --model_path "YOUR_MODEL_PATH"
+```
+
+## Citation
+
+``` bibtex
+@misc{hu2026smartthinkerprogressivechainofthoughtlength,
+      title={SmartThinker: Progressive Chain-of-Thought Length Calibration for Efficient Large Language Model Reasoning}, 
+      author={Chenzhi Hu and Qinzhe Hu and Yuhang Xu and Junyi Chen and Ruijie Wang and Shengzhong Liu and Jianxin Li and Fan Wu and Guihai Chen},
+      year={2026},
+      eprint={2603.08000},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2603.08000}, 
+}
 ```
