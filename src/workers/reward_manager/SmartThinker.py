@@ -31,7 +31,7 @@ import requests
 class SmartThinkerRewardManager(AbstractRewardManager):
     """The reward manager."""
 
-    def __init__(self, tokenizer, num_examine, compute_score=None, reward_fn_key="data_source", **kwargs) -> None:
+    def __init__(self, tokenizer, num_examine=1, compute_score=None, reward_fn_key="data_source", **kwargs) -> None:
         """
         Initialize the SmartThinkerRewardManager instance.
 

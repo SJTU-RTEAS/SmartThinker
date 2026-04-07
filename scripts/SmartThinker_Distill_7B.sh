@@ -37,7 +37,7 @@ use_dynamic_bsz=True
 
 # Train over a single node, 4 PRO6000-96GB GPUs.
 python3 ${PROJECT_HOME}/src/trainer/main_stepPrune.py \
-    algorithm.adv_estimator=grpo_stepprune \
+    algorithm.adv_estimator=grpo_smartthinker \
     data.train_files=${DATASET_DIR}/deepscaler_preview.parquet \
     data.val_files=${DATASET_DIR}/aime25.parquet \
     data.train_batch_size=64 \
