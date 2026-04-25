@@ -31,7 +31,7 @@ def main(args):
         tokenizer=model_path,
         dtype="bfloat16",
         trust_remote_code=True,
-        tensor_parallel_size=args.tensor_parellel_size,
+        tensor_parallel_size=args.tensor_parallel_size,
     )
 
     tokenizer = AutoTokenizer.from_pretrained(model_path)
@@ -111,6 +111,6 @@ if __name__ == "__main__":
     parser.add_argument("--model_path", type=str, default=None, help="Path to the model for evaluation.")
     parser.add_argument("--dataset", type=str, default="yentinglin/aime_2025", help="Dataset name or path to the dataset.")
     parser.add_argument("--sample_num", type=int, default=4, help="Number of samples to generate per question.")
-    parser.add_argument("--tensor_parellel_size", type=int, default=4, help="Tensor parallel size for VLLM inference.")
+    parser.add_argument("--tensor_parallel_size", type=int, default=4, help="Tensor parallel size for VLLM inference.")
     args = parser.parse_args()
     main(args)

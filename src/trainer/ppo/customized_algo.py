@@ -6,8 +6,8 @@ from verl.trainer.config import AlgoConfig
 from collections import defaultdict
 
 
-@register_adv_est("grpo_stepprune")  # or simply: @register_adv_est("grpo")
-def compute_grpo_stepprune_outcome_advantage(
+@register_adv_est("grpo_smartthinker")  # or simply: @register_adv_est("grpo")
+def compute_grpo_smartthinker_outcome_advantage(
     token_level_rewards: torch.Tensor,
     response_mask: torch.Tensor,
     index: np.ndarray,
@@ -74,14 +74,14 @@ def compute_grpo_stepprune_outcome_advantage(
         if step_sim_score is not None:
             scores = (scores - step_sim_score) * response_mask
         else:
-            #raise NotImplementedError("step_sim_score must be provided for stepprune.")
+            #raise NotImplementedError("step_sim_score must be provided for smartthinker.")
             scores = scores * response_mask
 
     return scores, scores
 
 
 @register_adv_est("grpo_decouple")  # or simply: @register_adv_est("grpo")
-def compute_grpo_stepprune_outcome_advantage(
+def compute_grpo_smartthinker_outcome_advantage(
     token_level_rewards: torch.Tensor,
     response_mask: torch.Tensor,
     index: np.ndarray,

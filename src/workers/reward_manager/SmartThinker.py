@@ -67,7 +67,7 @@ class SmartThinkerRewardManager(AbstractRewardManager):
         all_acc_score_list = [0.0] * len(data)
         all_opt_len_list = [0.0] * len(data)
                 
-        print("====Starting StepPrune Reward Computation====")
+        print("====Starting SmartThinker Reward Computation====")
 
         # Collect all response strings across all problem groups for batched processing
         all_response_str_list = []
