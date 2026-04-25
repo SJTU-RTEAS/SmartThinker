@@ -31,7 +31,7 @@ from verl.utils.config import validate_config
 from verl.utils.device import auto_set_ascend_device_name, is_cuda_available
 from verl.utils.import_utils import load_extern_object
 
-from trainer.ppo.ray_trainer_SmartThinker import RayPPOTrainer
+from ppo.ray_trainer_SmartThinker import RayPPOTrainer
 #from verl.utils.import_utils import import_external_libs  
 #import_external_libs(["ppo.customized_algo"])
 
