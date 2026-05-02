@@ -8,13 +8,25 @@ SmartThinker: Progressive Chain-of-Thought Length Calibration for Efficient Larg
 
 </div>
 
-## Abastrct
+![](figures/cover.png)
 
 Large reasoning models (LRMs) like OpenAI o1 and DeepSeek-R1 achieve high accuracy on complex tasks by adopting long chain-of-thought (CoT) reasoning paths.  However, the inherent verbosity of these processes frequently results in redundancy and overthinking. To address this issue, existing works leverage Group Relative Policy Optimization (GRPO) to reduce LRM output length, but their static length reward design cannot dynamically adapt according to the relative problem difficulty and response length distribution, causing over-compression and compromised accuracy. Therefore, we propose *SmartThinker*, a novel GRPO-based efficient reasoning method with progressive CoT length calibration. *SmartThinker* makes a two-fold contribution: First, it dynamically estimates the optimal length with peak accuracy during training and guides overlong responses toward it to reduce response length while sustaining accuracy. Second, it dynamically modulates the length reward coefficient to avoid the unwarranted penalization of correct reasoning paths. Extensive experiment results show that *SmartThinker* achieves up to 52.5\% average length compression with improved accuracy, and achieves up to 16.6\% accuracy improvement on challenging benchmarks like AIME25.
 
----
+## 📢 News
 
-## Dependencies
+- ‼️ [2026-04-30] We are pleased to announce that our paper has been accepted by ICML 2026! 🎉🎊🥳ֱ👏
+- 🔥 [2026-03-09] The paper can be accessed on arXiv now!🌟
+- 🔥 [2026-02-12] We have open-sourced the training and testing scripts from the paper, as well as all 1.5B and 4B parameter models!🤗
+
+## 📦 Resources
+
+- 📄 Paper: [SmartThinker: Progressive Chain-of-Thought Length Calibration for Efficient Large Language Model Reasoning](https://github.com/SJTU-RTEAS/SmartThinker)
+- 💻 Code: [github]()
+- 🧠 Models: [huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-green)
+
+## 🚀 Quick Start
+
+### Dependencies
 
 - python: 3.12
 - verl: 0.7.0.dev0
@@ -22,7 +34,7 @@ Large reasoning models (LRMs) like OpenAI o1 and DeepSeek-R1 achieve high accura
 - pytorch: 2.8.0
 - vllm: 0.11.0
 
-## Setup
+### Setup
 
 Clone the repository:
 
@@ -39,7 +51,7 @@ conda activate SmartThinker
 pip install -r requirement.txt
 ```
 
-## Data Preprocess
+### Data Preprocess
 
 Training dataset:
 
@@ -53,7 +65,7 @@ Test dataset:
 python data_preprocess/aime25.py
 ```
 
-## Training
+### Training
 
 First you need to configure your wandb api key:
 
@@ -79,7 +91,7 @@ After training is complete, run the following command to convert the specified c
 bash scripts/fsdp_merge_Distill_1.5B.sh
 ```
 
-## Test
+### Test
 
 The test scripts are located in the `src/test` folder. Take AIME25 as an example, run the following command to test the finetuned model:
 
@@ -87,16 +99,13 @@ The test scripts are located in the `src/test` folder. Take AIME25 as an example
 python src/test/aime25_vllm.py --model_path "YOUR_MODEL_PATH"
 ```
 
-## Citation
+## 🔗 Citation
 
 ``` bibtex
-@misc{hu2026smartthinkerprogressivechainofthoughtlength,
-      title={SmartThinker: Progressive Chain-of-Thought Length Calibration for Efficient Large Language Model Reasoning}, 
-      author={Chenzhi Hu and Qinzhe Hu and Yuhang Xu and Junyi Chen and Ruijie Wang and Shengzhong Liu and Jianxin Li and Fan Wu and Guihai Chen},
-      year={2026},
-      eprint={2603.08000},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2603.08000}, 
+@article{hu2026smartthinker,
+  title={SmartThinker: Progressive Chain-of-Thought Length Calibration for Efficient Large Language Model Reasoning},
+  author={Hu, Chenzhi and Hu, Qinzhe and Xu, Yuhang and Chen, Junyi and Wang, Ruijie and Liu, Shengzhong and Li, Jianxin and Wu, Fan and Chen, Guihai},
+  journal={arXiv preprint arXiv:2603.08000},
+  year={2026}
 }
 ```
