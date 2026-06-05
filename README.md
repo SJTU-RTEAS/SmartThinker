@@ -23,7 +23,7 @@ Large reasoning models (LRMs) like OpenAI o1 and DeepSeek-R1 achieve high accura
 
 - 📄 Paper: [SmartThinker: Progressive Chain-of-Thought Length Calibration for Efficient Large Language Model Reasoning](https://github.com/SJTU-RTEAS/SmartThinker)
 - 💻 Code: [github]()
-- 🧠 Models: [huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-green)
+- 🧠 Models: [huggingface](https://huggingface.co/collections/etherwindy/smartthinker)
 
 ## 🚀 Quick Start
 
